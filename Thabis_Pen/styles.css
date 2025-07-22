@@ -1,0 +1,343 @@
+/* General */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p{
+    color: rgb(85, 85, 85);
+}
+
+/* Transition */
+
+a,
+.btn{transition: all 300ms ease;}
+
+/* Desktop Nav */
+
+nav,
+.nav-links{
+    display: flex;
+    align-items: center;
+    color:white;
+    background-color: black;
+  /* filter: blur(10px); */
+}
+nav.sticky{
+  height: 5vh;
+  padding: 15px 0;
+  color: white;
+  background: black;
+}
+.nav-links.sticky{
+  color: black;
+  background: white;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    z-index: 10000;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style:none;
+    font-size: 1.5rem;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+  }
+  a:hover{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color:rgb(181, 181, 181);
+  }
+  .logo{
+    font-size: 2rem;
+  }
+  .logo:hover{
+    cursor: default;}
+    .logo,
+    .nav-links{
+      z-index:200000;
+    }
+
+    /*     Hamburger Menu */
+  #hamburger-nav{
+    position: fixed;
+    top:0;
+    display: none;
+  }
+  .hamburger-menu{
+    position: relative;
+    display: inline-block;
+  }
+  .hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+  }
+.hamburger-icon span{
+  width: 100%;
+  height:2px;
+  background-color: white;
+  transition: all 0.3 ease-in-out;
+}
+.menu-links{
+  position:absolute;
+  top:100%;
+  right:0;
+  background-color:white;
+  width:fit-content;
+  max-height:0;
+  overflow:hidden;
+  transition: all 0.3 ease-in-out;
+}
+.menu-links a{
+  display:block;
+  padding:10px;
+  text-align:center;
+  font-size:1.5rem;
+  color:black;
+  text-decoration:none;
+  transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+  list-style:none;
+}
+.menu-links.open{max-height:300px;}
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px)
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+transform: rotate(-45deg) translate(10px, -5px) 
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:first-child {
+  opacity:1;
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+  /*--------------End of NAVBAR----------------*/
+
+  section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 30px 50px 53px;
+    background: black;
+    width: auto;
+    height: auto;
+  }
+  section .chapter-one,
+  .chapter-two{
+    color: white;
+    width: auto;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 15px;
+    border: 2px solid grey;
+
+  }
+  section .chapter-one h1,
+  .chapter-two h1 h3 p{
+    font-size: 40px;
+    margin: 15px;
+  }
+  
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    /* margin: 15px; */
+  }
+  article:hover a{
+    text-decoration: none;
+  }
+  article:hover{
+    box-shadow: -5px -5px 10px rgb(250, 250, 250);
+  }
+
+  article a{
+    display: flex;
+    flex-direction: column;
+
+  }
+  section .chapter-one .cover-wrappers{
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  section .chapter-one .cover-wrappers article a img{
+    height: 200px;
+    width: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+
+  /* Chapter Two */
+  .chapter-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .chapter-two p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .chapter-two .blink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+  }
+  .wrapper{
+    /* padding: 40px 0 0 0; */
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 10%;
+    row-gap: 5%;
+    height: auto;
+  }
+  .wrapper article{
+  width: auto;
+  height: auto;
+    padding: 15px;
+    color: white;
+    /* margin: 15px; */
+    border-radius: 15px;
+    border: 2px solid grey;
+ }
+ .wrapper img{
+  object-fit: cover;
+  width: 450px;
+  height: 450px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+ }
+  .story-info{
+    display:flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  .story-info .icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 0 0;
+  }
+  .story-info .ïcons span{
+    display: flex;
+  }
+  .story-info .icons i{
+    font-size: 30px;
+  }
+  .story-info .icons i.bx-like:hover{
+    color:blue;
+  }
+  .story-info .icons i.bx-dislike:hover,
+  i.bx-bookmark-heart:hover{
+    color:red;
+  }
+
+
+
+ 
+
+  
+
+  @media screen and (max-width: 750px) {
+  /* Example: Stack navbar links vertically */
+  #desktop-nav {
+    display: none; /* Hide desktop nav links */
+  }
+
+  #hamburger-nav {
+    display: flex; /* Show mobile nav */
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height:auto;
+    background: black;
+    /* padding: 15px 0; */
+  }
+
+  .menu-links {
+    width: 100%;
+  }
+
+  /* Adjust section padding for smaller screens */
+  section {
+    padding: 100px 20px 40px 20px;
+  }
+
+  /* Stack grid items vertically */
+  .cover-wrappers {
+    display: flex;
+    overflow-y: hidden;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .story-info {
+    padding: 20px;
+  }
+
+  /* Adjust font sizes for readability */
+  h1, h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
